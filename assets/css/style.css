@@ -25,3 +25,13 @@ h1 {
   text-align: center;
   padding: 10px;
 }
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#circle {
+  height: 600px;
+  width: 600px;
+  background-color: #0f0;
+}

@@ -1,39 +1,48 @@
 "use strict";
+let currentKey;
+// create elements object
+const el = new Elements();
+// Pass elements to display
+const display = new Display(el, $);
+// ♭        &#9837;   /  &flat;
+// ♮        &#9838;   /  &natural;
+// ♯        &#9839;   /  &sharp;
+
 //The start of program exicution.
 window.onload = function () {
   startUp();
 };
 //Start Up
 function startUp() {
-  createKeys();
+  currentKey = createKeys();
+  console.log(currentKey);
+  display.paintCircle(currentKey.getHtml());
+  // "<h1>A<span>&sharp;</span> B<span>&flat;</span> C D E F G </h1>"
 }
-
-// ♭        &#9837;   /  &flat;
-// ♮        &#9838;   /  &natural;
-// ♯        &#9839;   /  &sharp;
 
 function createKeys() {
   let C = new Key("C", ["C", "D", "E", "F", "G", "A", "B"], 0, 0);
   let G = new Key("G", ["G", "A", "B", "C", "D", "E", "F#"], 1, 0);
   let D = new Key("D", ["D", "E", "F#", "G", "A", "B", "C#"], 2, 0);
   let A = new Key("A", ["A", "B", "C#", "D", "E", "F#", "G#"], 3, 0);
-  let EFflat = new Key("E/Fb", ["E", "F#", "G#", "A", "B", "C#", "D#"], 4, 0);
-  let BCflat = new Key("B/Cb", ["B", "C#", "D#", "E", "F#", "G#", "A#"], 5, 7);
+  let EFflat = new Key("E", ["E", "F#", "G#", "A", "B", "C#", "D#"], 4, 0);
+  let BCflat = new Key("B", ["B", "C#", "D#", "E", "F#", "G#", "A#"], 5, 0);
   let FsharpGflat = new Key(
-    "F#/Gb",
+    "F#",
     ["F#", "G#", "A#", "B", "C#", "D#", "E#"],
     6,
-    6
+    0
   );
+  //cutoff point
   let CsharpDflat = new Key(
-    "C#/Db",
+    "Db",
     ["Db", "Eb", "F", "Gb", "Ab", "Bb", "C"],
-    7,
+    0,
     5
   );
   let AflatGsharp = new Key(
-    "Ab/G#",
-    ["G", "A", "B", "C", "D", "E", "F#"],
+    "Ab",
+    ["Ab", "Bb", "C", "Db", "Eb", "F", "G"],
     0,
     4
   );
@@ -41,6 +50,7 @@ function createKeys() {
   let Bflat = new Key("Bb", ["Bb", "C", "D", "Eb", "F", "G", "A"], 0, 2);
   let F = new Key("F", ["F", "G", "A", "Bb", "C", "D", "E"], 0, 1);
 
+  // Set next and prev keys
   C.setPrevKey(F);
   C.setNextKey(G);
 
@@ -51,7 +61,7 @@ function createKeys() {
   D.setNextKey(A);
 
   A.setPrevKey(D);
-  A.setNextKey(Eflat);
+  A.setNextKey(EFflat);
 
   EFflat.setPrevKey(A);
   EFflat.setNextKey(BCflat);
@@ -66,7 +76,7 @@ function createKeys() {
   CsharpDflat.setNextKey(AflatGsharp);
 
   AflatGsharp.setPrevKey(CsharpDflat);
-  AflatGsharp.setNextKey(EFflat);
+  AflatGsharp.setNextKey(Eflat);
 
   Eflat.setPrevKey(AflatGsharp);
   Eflat.setNextKey(Bflat);
@@ -76,6 +86,41 @@ function createKeys() {
 
   F.setPrevKey(Bflat);
   F.setNextKey(C);
+
+  // create enharmonic Keys and set them to correct keys
+  let CsharpDflatEnharmonic = new Key(
+    "C#",
+    ["C#", "D#", "E#", "F#", "G#", "A#", "B#"],
+    7,
+    0
+  );
+  CsharpDflat.setEnharmonicKey(CsharpDflatEnharmonic);
+
+  let FsharpGflatEnharmonic = new Key(
+    "Gb",
+    ["Gb", "Ab", "Bb", "Cb", "Db", "Eb", "F"],
+    0,
+    6
+  );
+  FsharpGflat.setEnharmonicKey(FsharpGflatEnharmonic);
+
+  let BCflatEnharmonic = new Key(
+    "Cb",
+    ["Cb", "Db", "Eb", "Fb", "Gb", "Ab", "Bb"],
+    0,
+    7
+  );
+  BCflat.setEnharmonicKey(BCflatEnharmonic);
   // ################# TEST
   A.logValues();
+  return C;
 }
+
+el.prevKeyBtn.addEventListener("click", (e) => {
+  currentKey = currentKey.prevKey;
+  display.paintCircle(currentKey.getHtml());
+});
+el.nextKeyBtn.addEventListener("click", (e) => {
+  currentKey = currentKey.nextKey;
+  display.paintCircle(currentKey.getHtml());
+});
