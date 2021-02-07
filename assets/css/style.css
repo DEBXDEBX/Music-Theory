@@ -25,12 +25,16 @@ h1 {
   text-align: center;
   padding: 10px;
 }
+h6 {
+  text-align: center;
+  padding: 3px;
+}
 #main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#circle {
+#keyDiv {
   height: 600px;
   width: 600px;
   background-color: #0f0;

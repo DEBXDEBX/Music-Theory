@@ -1,7 +1,6 @@
 //Note class start
 class Key {
-  constructor(tonic, majorScale, sharps, flats) {
-    this.tonic = tonic;
+  constructor(majorScale, sharps, flats) {
     this.majorScale = majorScale;
     this.numberOfSharps = sharps;
     this.numberOfFlats = flats;
@@ -10,6 +9,7 @@ class Key {
     this.enharmonicKey;
     this.setSharps();
     this.setFlats();
+    this.tonic = this.majorScale[0];
   } // End constructor
 
   //Method
@@ -59,10 +59,13 @@ class Key {
       // stringOfNotes += `${this.majorScale[noteIndex]} `;
       stringOfNotes += `${note} `;
     }
-    return `<H1>${stringOfNotes}</H1> ${
-      this.enharmonicKey ? this.enharmonicKey.getHtml() : ""
-    }`;
+    return `<div><h6>Notes in the Key of ${this.tonic}</h6><h1>${stringOfNotes}</h1></div>`;
+
+    // return `<H1>${stringOfNotes}</H1> ${
+    //   this.enharmonicKey ? this.enharmonicKey.getHtml() : ""
+    // }`;
   } // End
+
   //Method
   logValues() {
     console.log("################################");

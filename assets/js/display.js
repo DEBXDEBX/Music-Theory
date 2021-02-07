@@ -21,7 +21,7 @@ class Display {
   } // End clearFileCabDisplay()
 
   //Method
-  paintCircle(html) {
-    this.elements.circle.innerHTML = html;
+  paintKeyDiv(html) {
+    this.elements.keyDiv.innerHTML = html;
   } // End clearFileCabDisplay()
 }
