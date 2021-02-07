@@ -1,5 +1,6 @@
 "use strict";
 let currentKey;
+let direction;
 // create elements object
 const el = new Elements();
 // Pass elements to display
@@ -99,10 +100,41 @@ function createKeys() {
 }
 
 el.prevKeyBtn.addEventListener("click", (e) => {
+  direction = "left";
   currentKey = currentKey.prevKey;
-  display.paintKeyDiv(currentKey.getHtml());
+  let html;
+  if (!currentKey.enharmonicKey) {
+    display.paintKeyDiv(currentKey.getHtml());
+  } else {
+    if (
+      direction === "left" &&
+      currentKey.enharmonicKey.tonic.includes("flat")
+    ) {
+      html = `${currentKey.enharmonicKey.getHtml()}${currentKey.getHtml()}`;
+      display.paintKeyDiv(html);
+    } else {
+      html = `${currentKey.getHtml()}${currentKey.enharmonicKey.getHtml()}`;
+      display.paintKeyDiv(html);
+    }
+  }
 });
+
 el.nextKeyBtn.addEventListener("click", (e) => {
+  direction = "right";
   currentKey = currentKey.nextKey;
-  display.paintKeyDiv(currentKey.getHtml());
+  let html;
+  if (!currentKey.enharmonicKey) {
+    display.paintKeyDiv(currentKey.getHtml());
+  } else {
+    if (
+      direction === "right" &&
+      currentKey.enharmonicKey.tonic.includes("sharp")
+    ) {
+      html = `${currentKey.enharmonicKey.getHtml()}${currentKey.getHtml()}`;
+      display.paintKeyDiv(html);
+    } else {
+      html = `${currentKey.getHtml()}${currentKey.enharmonicKey.getHtml()}`;
+      display.paintKeyDiv(html);
+    }
+  }
 });
