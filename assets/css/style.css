@@ -35,7 +35,28 @@ h6 {
   align-items: center;
 }
 #keyDiv {
-  height: 600px;
-  width: 600px;
   background-color: #0f0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.key {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.noteDiv {
+  width: 100px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 5px;
+}
+.note {
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.scale {
+  display: flex;
 }

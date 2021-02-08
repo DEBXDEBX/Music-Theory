@@ -39,7 +39,6 @@ class Key {
   setFlats() {
     let newArray = [];
     for (let note of this.majorScale) {
-      console.log(note);
       note = note.replace("b", "&flat;");
       newArray.push(note);
       this.majorScale = newArray;
@@ -52,18 +51,39 @@ class Key {
   } // End
 
   //Method
-  getHtml() {
-    let html = "";
+  getMajorScaleHtml() {
     let stringOfNotes = "";
     for (let note of this.majorScale) {
-      // stringOfNotes += `${this.majorScale[noteIndex]} `;
-      stringOfNotes += `${note} `;
+      stringOfNotes += `<div class="noteDiv"><h4 class="note">${note}</h4></div>`;
     }
-    return `<div><h6>Notes in the Key of ${this.tonic}</h6><h1>${stringOfNotes}</h1></div>`;
+    return stringOfNotes;
+  } // End
+  //Method
+  getRelativeMinorScaleHtml() {
+    // make relative minor scale array
+    let relativeMinorScale = [];
+    relativeMinorScale.push(this.majorScale[5]);
+    relativeMinorScale.push(this.majorScale[6]);
+    relativeMinorScale.push(this.majorScale[0]);
+    relativeMinorScale.push(this.majorScale[1]);
+    relativeMinorScale.push(this.majorScale[2]);
+    relativeMinorScale.push(this.majorScale[3]);
+    relativeMinorScale.push(this.majorScale[4]);
 
-    // return `<H1>${stringOfNotes}</H1> ${
-    //   this.enharmonicKey ? this.enharmonicKey.getHtml() : ""
-    // }`;
+    let stringOfNotes = "";
+    for (let note of relativeMinorScale) {
+      stringOfNotes += `<div class="noteDiv"><h4 class="note">${note}</h4></div>`;
+    }
+    return stringOfNotes;
+  } // End
+  //Method
+  getHtml() {
+    return `<div class="key"><h6>Notes in the Key of ${this.tonic}</h6><h6>${
+      this.tonic
+    } major scale</h6><div class="scale">${this.getMajorScaleHtml()}</div>
+    <h6>${this.majorScale[5]} Relitive minor</h6><h6>${
+      this.majorScale[5]
+    } minor scale</h6><div class="scale">${this.getRelativeMinorScaleHtml()}</div></div>`;
   } // End
 
   //Method

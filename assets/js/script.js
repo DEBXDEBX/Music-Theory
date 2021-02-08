@@ -110,10 +110,10 @@ el.prevKeyBtn.addEventListener("click", (e) => {
       direction === "left" &&
       currentKey.enharmonicKey.tonic.includes("flat")
     ) {
-      html = `${currentKey.enharmonicKey.getHtml()}${currentKey.getHtml()}`;
+      html = `${currentKey.enharmonicKey.getHtml()}<h1>Enharmonic key</h1>${currentKey.getHtml()}`;
       display.paintKeyDiv(html);
     } else {
-      html = `${currentKey.getHtml()}${currentKey.enharmonicKey.getHtml()}`;
+      html = `${currentKey.getHtml()}<h1>Enharmonic key</h1>${currentKey.enharmonicKey.getHtml()}`;
       display.paintKeyDiv(html);
     }
   }
@@ -130,10 +130,10 @@ el.nextKeyBtn.addEventListener("click", (e) => {
       direction === "right" &&
       currentKey.enharmonicKey.tonic.includes("sharp")
     ) {
-      html = `${currentKey.enharmonicKey.getHtml()}${currentKey.getHtml()}`;
+      html = `${currentKey.enharmonicKey.getHtml()}<h1>Enharmonic key</h1>${currentKey.getHtml()}`;
       display.paintKeyDiv(html);
     } else {
-      html = `${currentKey.getHtml()}${currentKey.enharmonicKey.getHtml()}`;
+      html = `${currentKey.getHtml()}<h1>Enharmonic key</h1>${currentKey.enharmonicKey.getHtml()}`;
       display.paintKeyDiv(html);
     }
   }
