@@ -36,7 +36,7 @@ function createKeys() {
   let Bflat = new Key(["Bb", "C", "D", "Eb", "F", "G", "A"], 0, 2);
   let F = new Key(["F", "G", "A", "Bb", "C", "D", "E"], 0, 1);
 
-  // Set next and prev keys
+  // Set next and prev keys, this is a linked list
   C.setPrevKey(F);
   C.setNextKey(G);
 

@@ -60,3 +60,39 @@ h6 {
 .scale {
   display: flex;
 }
+.chordFlexWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.chordSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: purple;
+  border-radius: 25px;
+}
+.chordSection h5 {
+  text-align: center;
+  color: white;
+}
+.chordSection h6 {
+  text-align: center;
+  color: white;
+}
+.chordNoteDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5px;
+}
+.chordNoteDiv h6 {
+  text-align: center;
+}
+
+.noteChordInnerDiv {
+  width: 35px;
+  border-radius: 50%;
+  background-color: black;
+}
