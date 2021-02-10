@@ -16,7 +16,6 @@ window.onload = function () {
 //Start Up
 function startUp() {
   currentKey = createKeys();
-  console.log(currentKey);
   display.paintKeyDiv(currentKey.getHtml());
   // "<h1>A<span>&sharp;</span> B<span>&flat;</span> C D E F G </h1>"
 }
@@ -94,8 +93,7 @@ function createKeys() {
     7
   );
   BCflat.setEnharmonicKey(BCflatEnharmonic);
-  // ################# TEST
-  A.logValues();
+
   return C;
 }
 

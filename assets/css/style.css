@@ -27,6 +27,7 @@ h1 {
 }
 h6 {
   text-align: center;
+  color: white;
   padding: 3px;
   margin: 0px;
 }
@@ -35,8 +36,12 @@ h6 {
   justify-content: center;
   align-items: center;
 }
+#prevKeyBtn,
+#nextKeyBtn {
+  margin: 50px;
+}
 #keyDiv {
-  background-color: #0f0;
+  /* background-color: #0f0; */
   padding: 10px;
   border-radius: 10px;
 }
@@ -46,6 +51,12 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.keySection {
+  background-color: #d410ec;
+  margin: 2px;
+  padding: 10px;
+  border-radius: 10px;
 }
 .noteDiv {
   width: 100px;
@@ -57,9 +68,12 @@ h6 {
   color: white;
   padding: 10px;
   text-align: center;
+  margin: 25px;
 }
 .scale {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .chordFlexWrapper {
   display: flex;
@@ -70,9 +84,10 @@ h6 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: purple;
+  background-color: #1e34ce;
   border-radius: 25px;
   margin: 1px;
+  padding: 2px;
 }
 .chordSection h5 {
   text-align: center;
