@@ -28,6 +28,7 @@ h1 {
 h6 {
   text-align: center;
   padding: 3px;
+  margin: 0px;
 }
 #main {
   display: flex;
@@ -62,7 +63,7 @@ h6 {
 }
 .chordFlexWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .chordSection {
   display: flex;
@@ -71,6 +72,7 @@ h6 {
   text-align: center;
   background-color: purple;
   border-radius: 25px;
+  margin: 1px;
 }
 .chordSection h5 {
   text-align: center;

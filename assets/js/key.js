@@ -11,6 +11,7 @@ class Key {
     this.setFlats();
     this.tonic = this.majorScale[0];
     this.diatonicChordArray = this.buildDiatonticChordArray();
+    this.relativeMinorChordArray = this.buildRelativMinorArray();
   } // End constructor
 
   //Method
@@ -184,7 +185,31 @@ class Key {
       html += chordHtml;
     }
     return `<div class="chordFlexWrapper">${html}</div>`;
+  }
+  //Method
+  buildRelativMinorArray() {
+    let newArray = [];
+
+    newArray.push(this.diatonicChordArray[5].replace("&#8565", "&#8560"));
+    newArray.push(this.diatonicChordArray[6].replace("&#8566", "&#8561"));
+    newArray.push(this.diatonicChordArray[0].replace("&#8544", "&#8546"));
+    newArray.push(this.diatonicChordArray[1].replace("&#8561", "&#8563"));
+    newArray.push(this.diatonicChordArray[2].replace("&#8562", "&#8564"));
+    newArray.push(this.diatonicChordArray[3].replace("&#8547", "&#8549"));
+    newArray.push(this.diatonicChordArray[4].replace("&#8548", "&#8550"));
+
+    return newArray;
   } // End
+
+  //Method
+  getRelativeMinorChordsHtml() {
+    let html = "";
+    for (let chordHtml of this.relativeMinorChordArray) {
+      html += chordHtml;
+    }
+    return `<div class="chordFlexWrapper">${html}</div>`;
+  } // End
+
   //Method
   getMajorScaleHtml() {
     let stringOfNotes = "";
@@ -228,7 +253,8 @@ class Key {
     <div class="chordFlexWrapper">${this.getDiatonicChordsHtml()}</div>
   <h6>${this.majorScale[5]} Relitive minor</h6><h6>${
       this.majorScale[5]
-    } minor scale</h6><div class="scale">${this.getRelativeMinorScaleHtml()}</div></div>`;
+    } minor scale</h6><div class="scale">${this.getRelativeMinorScaleHtml()}</div>
+    <div class="chordFlexWrapper">${this.getRelativeMinorChordsHtml()}</div></div>`;
   } // End
   //Method
   logValues() {
