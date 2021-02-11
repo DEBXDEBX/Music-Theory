@@ -113,3 +113,44 @@ h6 {
   border-radius: 50%;
   background-color: black;
 }
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  .noteDiv {
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 5px;
+  }
+  .note {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 2px;
+  }
+  .chordFlexWrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .keySection {
+    margin: 1px;
+    padding: 1px;
+    border-radius: 10px;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.6rem;
+  }
+  body {
+    max-width: 600px;
+  }
+  .btn {
+    font-size: 0.5rem;
+  }
+}
