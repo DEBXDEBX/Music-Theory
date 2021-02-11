@@ -1,8 +1,8 @@
 class Display {
-  constructor(elements, $) {
+  constructor(elements) {
     this.elements = elements;
     // JQuery
-    this.$ = $;
+    // this.$ = $;
   } // End constructor
 
   //Method

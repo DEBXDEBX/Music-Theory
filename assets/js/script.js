@@ -4,11 +4,11 @@ let direction;
 // create elements object
 const el = new Elements();
 // Pass elements to display
-const display = new Display(el, $);
+const display = new Display(el);
 // ♭        &#9837;   /  &flat;
 // ♮        &#9838;   /  &natural;
 // ♯        &#9839;   /  &sharp;
-
+const tabAudio = document.querySelector("#tabAudio");
 //The start of program exicution.
 window.onload = function () {
   startUp();
@@ -98,6 +98,7 @@ function createKeys() {
 }
 
 el.prevKeyBtn.addEventListener("click", (e) => {
+  tabAudio.play();
   direction = "left";
   currentKey = currentKey.prevKey;
   let html;
@@ -118,6 +119,7 @@ el.prevKeyBtn.addEventListener("click", (e) => {
 });
 
 el.nextKeyBtn.addEventListener("click", (e) => {
+  tabAudio.play();
   direction = "right";
   currentKey = currentKey.nextKey;
   let html;

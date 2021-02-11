@@ -186,6 +186,16 @@ class Key {
     }
     return `<div class="chordFlexWrapper">${html}</div>`;
   }
+
+  //Method
+  getNumberSharpsFlats() {
+    if (this.numberOfSharps === 0 && this.numberOfFlats === 0) {
+      return " ";
+    }
+    return this.numberOfSharps === 0
+      ? `      ${this.numberOfFlats}&#9837;`
+      : `      ${this.numberOfSharps}&sharp;`;
+  }
   //Method
   buildRelativMinorArray() {
     let newArray = [];
@@ -236,43 +246,20 @@ class Key {
     }
     return stringOfNotes;
   } // End
-  getHtmlHIDE() {
-    return `<div class="key"><h6>Notes in the Key of ${this.tonic}</h6><h6>${
-      this.tonic
-    } major scale</h6><div class="scale">${this.getMajorScaleHtml()}</div>
-    <div class="chordFlexWrapper">${this.getDiatonicChordsHtml()}</div>
-  <h6>${this.majorScale[5]} Relitive minor</h6><h6>${
-      this.majorScale[5]
-    } minor scale</h6><div class="scale">${this.getRelativeMinorScaleHtml()}</div></div>`;
-  } // End
+
   //Method
   getHtml() {
     return `<div class="key"><div class="keySection"><h6>Notes in the Key of ${
       this.tonic
-    }</h6><h6>${
+    }      ${this.getNumberSharpsFlats()}</h6><h6>${
       this.tonic
     } major scale</h6><div class="scale">${this.getMajorScaleHtml()}</div>
     <div class="chordFlexWrapper">${this.getDiatonicChordsHtml()}</div>
     </div>
     <div class="keySection">
-  <h6>Note's in the Relitive minor Key</h6><h6>${
-    this.majorScale[5]
-  } minor scale</h6><div class="scale">${this.getRelativeMinorScaleHtml()}</div>
+  <h6>Note's in the Relitive minor Key ${this.getNumberSharpsFlats()}</h6><h6>${
+      this.majorScale[5]
+    } minor scale</h6><div class="scale">${this.getRelativeMinorScaleHtml()}</div>
     <div class="chordFlexWrapper">${this.getRelativeMinorChordsHtml()}</div></div></div>`;
   } // End
-  //Method
-  logValues() {
-    console.log("################################");
-    console.log(`Tonic: ${this.tonic}`);
-    console.log(`sharps: ${this.numberOfSharps}`);
-    console.log(`flats: ${this.numberOfFlats}`);
-    console.log(this.majorScale);
-    console.log(this.prevKey);
-    console.log(this.nextKey);
-    console.log("################################");
-  } // End
 } // End Note class
-
-{
-  /* <div class="chordFlexWrapper">${this.getRelativeMinorScaleHtml()}</div> */
-}
