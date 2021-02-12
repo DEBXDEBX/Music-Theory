@@ -190,7 +190,7 @@ class Key {
   //Method
   getNumberSharpsFlats() {
     if (this.numberOfSharps === 0 && this.numberOfFlats === 0) {
-      return " ";
+      return ".";
     }
     return this.numberOfSharps === 0
       ? `      ${this.numberOfFlats}&#9837;`
@@ -249,6 +249,22 @@ class Key {
 
   //Method
   getHtml() {
+    return `<div class="key"><div class="keySection"><h6>Notes in the Key of ${
+      this.tonic
+    }<h6>${this.getNumberSharpsFlats()}</h6</h6><h6>${
+      this.tonic
+    } major scale</h6><div class="scale">${this.getMajorScaleHtml()}</div>
+      ${this.getDiatonicChordsHtml()}
+      </div>
+      <div class="keySection">
+    <h6>Note's in the Relitive minor Key <h6>${this.getNumberSharpsFlats()}</h6></h6><h6>${
+      this.majorScale[5]
+    } minor scale</h6><div class="scale">${this.getRelativeMinorScaleHtml()}</div>
+      ${this.getRelativeMinorChordsHtml()}</div></div>`;
+  } // End
+
+  //Method
+  getHtmlHIDE() {
     return `<div class="key"><div class="keySection"><h6>Notes in the Key of ${
       this.tonic
     }      ${this.getNumberSharpsFlats()}</h6><h6>${

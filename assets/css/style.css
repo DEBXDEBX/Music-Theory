@@ -11,6 +11,7 @@ html,
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7em;
+  margin: 0 auto;
 }
 a {
   text-decoration: none;
@@ -41,7 +42,7 @@ h6 {
   margin: 0px 50px;
 }
 #keyDiv {
-  /* background-color: #0f0; */
+  background-color: aqua;
   padding: 10px;
   border-radius: 10px;
 }
@@ -113,7 +114,7 @@ h6 {
   border-radius: 50%;
   background-color: black;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
   h1 {
     font-size: 1rem;
   }
@@ -127,15 +128,16 @@ h6 {
     margin: 5px;
   }
   .note {
-    color: white;
+    /* color: white;
     padding: 10px;
-    text-align: center;
+    text-align: center; */
     margin: 2px;
   }
   .chordFlexWrapper {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .keySection {
     margin: 1px;
     padding: 1px;
@@ -151,6 +153,36 @@ h6 {
     max-width: 600px;
   }
   .btn {
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .note {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 2px;
+  }
+}
+
+.btn {
+  font-size: 0.5rem;
+}
+
+@media screen and (max-width: 420px) {
+  .scale {
+    flex-wrap: wrap;
+  }
+
+  #prevKeyBtn,
+  #nextKeyBtn {
+    margin: 0px 10px;
+    font-size: 0.5rem;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 280px) {
+  h1 {
     font-size: 0.5rem;
   }
 }
