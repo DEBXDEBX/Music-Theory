@@ -57,20 +57,20 @@ class Key {
     let chordHtmlArray = [];
 
     let oneChord = `<div class="chordSection">
-    <h5>&#8544;</h5>
-    <h6>${this.majorScale[0]}</h6>
-    <div class="chordNoteDiv">
-    <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[0]}</h6>
-      </div>
-      <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[2]}</h6>
-      </div>
-      <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[4]}</h6>
-      </div>
+  <h5>&#8544;</h5>
+  <h6>${this.majorScale[0]}</h6>
+  <div class="chordNoteDiv">
+  <div class="noteChordInnerDiv">
+    <h6 class="chordNote">${this.majorScale[0]}</h6>
     </div>
-  </div>`;
+    <div class="noteChordInnerDiv">
+    <h6 class="chordNote">${this.majorScale[2]}</h6>
+    </div>
+    <div class="noteChordInnerDiv">
+    <h6 class="chordNote">${this.majorScale[4]}</h6>
+    </div>
+  </div>
+</div>`;
     chordHtmlArray.push(oneChord);
 
     let twoChord = `<div class="chordSection">
@@ -78,13 +78,13 @@ class Key {
     <h6>${this.majorScale[1]} min</h6>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[1]}</h6>
+      <h6 class="chordNote">${this.majorScale[1]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[3]}</h6>
+      <h6 class="chordNote">${this.majorScale[3]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[5]}</h6>
+      <h6 class="chordNote">${this.majorScale[5]}</h6>
       </div>
     </div>
   </div>`;
@@ -95,13 +95,13 @@ class Key {
     <h6>${this.majorScale[2]} min</h6>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[2]}</h6>
+      <h6 class="chordNote">${this.majorScale[2]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[4]}</h6>
+      <h6 class="chordNote">${this.majorScale[4]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[6]}</h6>
+      <h6 class="chordNote">${this.majorScale[6]}</h6>
       </div>
     </div>
   </div>`;
@@ -112,13 +112,13 @@ class Key {
     <h6>${this.majorScale[3]}</h6>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[3]}</h6>
+      <h6 class="chordNote">${this.majorScale[3]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[5]}</h6>
+      <h6 class="chordNote">${this.majorScale[5]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[0]}</h6>
+      <h6 class="chordNote">${this.majorScale[0]}</h6>
       </div>
     </div>
   </div>`;
@@ -129,13 +129,13 @@ class Key {
     <h6>${this.majorScale[4]}</h6>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[4]}</h6>
+      <h6 class="chordNote">${this.majorScale[4]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[6]}</h6>
+      <h6 class="chordNote">${this.majorScale[6]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[1]}</h6>
+      <h6 class="chordNote">${this.majorScale[1]}</h6>
       </div>
     </div>
   </div>`;
@@ -146,13 +146,13 @@ class Key {
     <h6>${this.majorScale[5]} min</h6>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[5]}</h6>
+      <h6 class="chordNote">${this.majorScale[5]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[0]}</h6>
+      <h6 class="chordNote">${this.majorScale[0]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[2]}</h6>
+      <h6 class="chordNote">${this.majorScale[2]}</h6>
       </div>
     </div>
   </div>`;
@@ -163,13 +163,13 @@ class Key {
     <h6>${this.majorScale[6]} dim</h6>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[6]}</h6>
+      <h6 class="chordNote">${this.majorScale[6]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[1]}</h6>
+      <h6 class="chordNote">${this.majorScale[1]}</h6>
       </div>
       <div class="noteChordInnerDiv">
-      <h6>${this.majorScale[3]}</h6>
+      <h6 class="chordNote">${this.majorScale[3]}</h6>
       </div>
     </div>
   </div>`;
