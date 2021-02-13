@@ -190,11 +190,22 @@ class Key {
   //Method
   getNumberSharpsFlats() {
     if (this.numberOfSharps === 0 && this.numberOfFlats === 0) {
-      return ".";
+      return "-";
     }
-    return this.numberOfSharps === 0
-      ? `      ${this.numberOfFlats}&#9837;`
-      : `      ${this.numberOfSharps}&sharp;`;
+
+    if (this.numberOfSharps === 0) {
+      if (this.numberOfFlats === 1) {
+        return `      ${this.numberOfFlats}&#9837;`;
+      } else {
+        return `  ${this.numberOfFlats}&#9837;'s`;
+      }
+    } else {
+      if (this.numberOfSharps === 1) {
+        return `      ${this.numberOfSharps}&sharp;`;
+      } else {
+        return `      ${this.numberOfSharps}&sharp;'s`;
+      }
+    }
   }
   //Method
   buildRelativMinorArray() {
@@ -249,17 +260,19 @@ class Key {
 
   //Method
   getHtml() {
-    return `<div class="key"><div class="keySection"><h6>Notes in the Key of ${
+    return `<div class="key"><div class="keySection"><h6 class="heading">Notes in the Key of ${
       this.tonic
-    }<h6>${this.getNumberSharpsFlats()}</h6</h6><h6>${
+    }<h6 class="heading">${this.getNumberSharpsFlats()}</h6</h6><h6 class="heading">${
       this.tonic
     } major scale</h6><div class="scale">${this.getMajorScaleHtml()}</div>
+    <h6 class="heading">Chords in the Key of ${this.tonic}</h6>
       ${this.getDiatonicChordsHtml()}
       </div>
       <div class="keySection">
-    <h6>Note's in the Relitive minor Key <h6>${this.getNumberSharpsFlats()}</h6></h6><h6>${
+    <h6 class="heading">Note's in the Relitive minor Key <h6 class="heading">${this.getNumberSharpsFlats()}</h6></h6><h6 class="heading">${
       this.majorScale[5]
     } minor scale</h6><div class="scale">${this.getRelativeMinorScaleHtml()}</div>
+    <h6 class="heading">Chords in the Key of ${this.majorScale[5]} minor</h6>
       ${this.getRelativeMinorChordsHtml()}</div></div>`;
   } // End
 
@@ -270,6 +283,7 @@ class Key {
     }      ${this.getNumberSharpsFlats()}</h6><h6>${
       this.tonic
     } major scale</h6><div class="scale">${this.getMajorScaleHtml()}</div>
+    <h6 class="heading">Chords in the Key of ${this.tonic}</h6>
     <div class="chordFlexWrapper">${this.getDiatonicChordsHtml()}</div>
     </div>
     <div class="keySection">
@@ -279,3 +293,7 @@ class Key {
     <div class="chordFlexWrapper">${this.getRelativeMinorChordsHtml()}</div></div></div>`;
   } // End
 } // End Note class
+
+{
+  /* <h6 class="heading>Chords in the Key of ${this.tonic}</h6> */
+}

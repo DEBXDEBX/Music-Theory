@@ -21,16 +21,19 @@ a {
   --primary-color: #0f0;
   --secondary-color: #00f;
 }
-/* use Variables */
 h1 {
   text-align: center;
   padding: 10px;
 }
 h6 {
   text-align: center;
-  /* color: white; */
   padding: 3px;
   margin: 0px;
+  font-weight: 900;
+}
+h4,
+h5 {
+  font-weight: 900;
 }
 #main {
   display: flex;
@@ -40,6 +43,9 @@ h6 {
 #prevKeyBtn,
 #nextKeyBtn {
   margin: 0px 50px;
+}
+.heading {
+  font-size: 2.5rem;
 }
 #keyDiv {
   background-color: #00e8ff;
@@ -63,13 +69,12 @@ h6 {
   width: 100px;
   border-radius: 50%;
   background-color: white;
-  margin: 1px;
+  margin: 10px;
   border-style: solid;
   border-color: black;
   border-width: 7px;
 }
 .note {
-  /* background-color: white; */
   padding: 1px;
   text-align: center;
   margin: 25px;
@@ -92,7 +97,7 @@ h6 {
   background-color: #26f20c;
   border-radius: 25px;
   margin: 1px;
-  padding: 2px;
+  padding: 5px;
 }
 .chordSection h5 {
   text-align: center;
@@ -115,7 +120,7 @@ h6 {
 }
 
 .noteChordInnerDiv {
-  width: 40px;
+  width: 100px;
   border-radius: 50%;
   background-color: white;
   margin: 1px;
@@ -130,6 +135,9 @@ h6 {
   }
   h4 {
     font-size: 1rem;
+  }
+  .heading {
+    font-size: 2rem;
   }
   .noteDiv {
     width: 60px;
@@ -163,31 +171,42 @@ h6 {
   }
 }
 @media screen and (max-width: 640px) {
+  .heading {
+    font-size: 1.5rem;
+  }
   .note {
-    /* color: white; */
     padding: 10px;
     text-align: center;
     margin: 2px;
   }
 }
 
-.btn {
-  font-size: 0.5rem;
-}
-
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 540px) {
+  .heading {
+    font-size: 1.5rem;
+  }
   .scale {
     flex-wrap: wrap;
   }
-
+  .note {
+    font-size: 0.7rem;
+  }
+  .noteDiv {
+    /* width: 40px; */
+    margin: 1px;
+  }
   #prevKeyBtn,
   #nextKeyBtn {
     margin: 0px 10px;
-    font-size: 0.5rem;
-    padding: 10px;
+    padding: 5px;
   }
 }
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 540px) {
+  .heading {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 330px) {
   h1 {
     font-size: 0.5rem;
   }
