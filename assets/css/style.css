@@ -10,8 +10,8 @@
 html,
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.7em;
   margin: 0 auto;
+  /* line-height: 1.7em; */
 }
 a {
   text-decoration: none;
@@ -21,6 +21,7 @@ a {
   --primary-color: #0f0;
   --secondary-color: #00f;
 }
+
 h1 {
   text-align: center;
   padding: 10px;
@@ -96,7 +97,7 @@ h5 {
   text-align: center;
   background-color: #26f20c;
   border-radius: 25px;
-  margin: 1px;
+  margin: 2px;
   padding: 5px;
 }
 .chordSection h5 {
@@ -129,7 +130,7 @@ h5 {
   border-width: 4px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 890px) {
   h1 {
     font-size: 1rem;
   }
