@@ -90,6 +90,7 @@ h5 {
   display: flex;
   justify-content: space-around;
 }
+
 .chordSection {
   display: flex;
   flex-direction: column;
@@ -102,11 +103,9 @@ h5 {
 }
 .chordSection h5 {
   text-align: center;
-  /* color: white; */
 }
 .chordSection h6 {
   text-align: center;
-  /* color: white; */
 }
 .chordNoteDiv {
   display: flex;

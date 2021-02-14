@@ -275,25 +275,4 @@ class Key {
     <h6 class="heading">Chords in the Key of ${this.majorScale[5]} minor</h6>
       ${this.getRelativeMinorChordsHtml()}</div></div>`;
   } // End
-
-  //Method
-  getHtmlHIDE() {
-    return `<div class="key"><div class="keySection"><h6>Notes in the Key of ${
-      this.tonic
-    }      ${this.getNumberSharpsFlats()}</h6><h6>${
-      this.tonic
-    } major scale</h6><div class="scale">${this.getMajorScaleHtml()}</div>
-    <h6 class="heading">Chords in the Key of ${this.tonic}</h6>
-    <div class="chordFlexWrapper">${this.getDiatonicChordsHtml()}</div>
-    </div>
-    <div class="keySection">
-  <h6>Note's in the Relitive minor Key ${this.getNumberSharpsFlats()}</h6><h6>${
-      this.majorScale[5]
-    } minor scale</h6><div class="scale">${this.getRelativeMinorScaleHtml()}</div>
-    <div class="chordFlexWrapper">${this.getRelativeMinorChordsHtml()}</div></div></div>`;
-  } // End
-} // End Note class
-
-{
-  /* <h6 class="heading>Chords in the Key of ${this.tonic}</h6> */
 }
