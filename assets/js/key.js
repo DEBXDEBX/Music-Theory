@@ -160,7 +160,7 @@ class Key {
 
     let sevenChord = `<div class="chordSection">
     <h5>&#8566;</h5>
-    <h6>${this.majorScale[6]} dim</h6>
+    <h6>${this.majorScale[6]} &#176;</h6>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
       <h6 class="chordNote">${this.majorScale[6]}</h6>
