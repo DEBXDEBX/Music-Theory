@@ -112,7 +112,6 @@ h5 {
   justify-content: center;
   align-items: center;
   margin: 5px;
-  width: 100px;
 }
 
 .chordNoteDiv h6 {
@@ -120,7 +119,7 @@ h5 {
 }
 
 .noteChordInnerDiv {
-  width: 100px;
+  min-width: 43px;
   border-radius: 50%;
   background-color: white;
   margin: 1px;
@@ -129,7 +128,13 @@ h5 {
   border-width: 4px;
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 1163px) {
+  .noteDiv {
+    max-width: 49px;
+  }
+  .noteChordInnerDiv {
+    min-width: 33px;
+  }
   h1 {
     font-size: 1rem;
   }
@@ -171,6 +176,9 @@ h5 {
   }
 }
 @media screen and (max-width: 640px) {
+  .noteDiv {
+    min-width: 66px;
+  }
   .heading {
     font-size: 1.5rem;
   }
@@ -192,7 +200,6 @@ h5 {
     font-size: 0.7rem;
   }
   .noteDiv {
-    /* width: 40px; */
     margin: 1px;
   }
   #prevKeyBtn,
