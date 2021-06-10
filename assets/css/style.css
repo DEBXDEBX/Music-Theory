@@ -145,11 +145,25 @@ h5 {
     font-size: 2rem;
   }
   .noteDiv {
-    width: 60px;
-    background-color: white;
-    margin: 5px;
+    min-width: 66px;
+  }
+  .heading {
+    font-size: 1.5rem;
   }
   .note {
+    padding: 10px;
+    text-align: center;
+    margin: 2px;
+  }
+  .noteDiv {
+    min-width: 66px;
+  }
+  .heading {
+    font-size: 1.5rem;
+  }
+  .note {
+    padding: 10px;
+    text-align: center;
     margin: 2px;
   }
   .chordFlexWrapper {
@@ -176,20 +190,12 @@ h5 {
   }
 }
 @media screen and (max-width: 640px) {
-  .noteDiv {
-    min-width: 66px;
-  }
   .heading {
     font-size: 1.5rem;
   }
-  .note {
-    padding: 10px;
-    text-align: center;
-    margin: 2px;
-  }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 630px) {
   .heading {
     font-size: 1.5rem;
   }
