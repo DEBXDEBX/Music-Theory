@@ -10,7 +10,6 @@ class Display {
 
   //Method
   paintChordProgressionDiv(html) {
-    console.log("called");
     this.elements.chordProgressionDiv.innerHTML = html;
   } // End paintchordProgressionDiv()
 }
