@@ -227,8 +227,20 @@ h5 {
 /* new code ********************************* */
 .progression {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ec10d2;
   padding: 10px;
   width: 90%;
   margin: auto;
+}
+.progressionFlex {
+  /* display: flex;
+  background-color: #ec10d2;
+  padding: 10px;
+  width: 90%;
+  margin: auto; */
+}
+.numOfTimes {
+  font-weight: 900;
 }

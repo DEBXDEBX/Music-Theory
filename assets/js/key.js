@@ -283,12 +283,23 @@ class Key {
     return `<div class="progressions"><div class="progressionsSection"><h6 class="heading">Chord progression's in the Key of ${
       this.tonic
     }</h6>
-    ${this.getBluesProgression()}</div></div>`;
+    ${this.get12BarBlues()}</div></div>`;
   } // End
 
   //Method
-  getBluesProgression() {
+  get12BarBlues() {
     // return this.diatonicChordArray[0];
-    return `<div class="progression"><div class="chordSection">${this.diatonicChordArray[0]}</div>${this.diatonicChordArray[0]} ${this.diatonicChordArray[0]} ${this.diatonicChordArray[0]}  </div>`;
+    return `<div class="progression"><h6 class="heading">12 Bar Blues</h6><div class="chordSection">${this.wrapChordDuration(
+      4,
+      this.diatonicChordArray[0]
+    )}</div>  </div>`;
+  } // End
+
+  //Method
+  wrapChordDuration(number, chordHtml) {
+    return `<div class="wrapChordDuration">
+   <div>${chordHtml}</div>
+   <div class="numOfTimes">X ${number}</div>
+    </div>`;
   } // End
 }
