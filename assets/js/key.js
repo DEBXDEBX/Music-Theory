@@ -280,8 +280,6 @@ class Key {
 
   //Method
   getChordProgressionsHtml() {
-    // return "hello david";
-    // return `${this.getBluesProgression()}`;
     return `<div class="progressions"><div class="progressionsSection"><h6 class="heading">Chord progression's in the Key of ${
       this.tonic
     }</h6>

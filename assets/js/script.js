@@ -104,8 +104,10 @@ el.prevKeyBtn.addEventListener("click", (e) => {
   direction = "left";
   currentKey = currentKey.prevKey;
   let html;
+  let progressionHtml;
   if (!currentKey.enharmonicKey) {
     display.paintKeyDiv(currentKey.getHtml());
+    display.paintChordProgressionDiv(currentKey.getChordProgressionsHtml());
   } else {
     if (
       direction === "left" &&
@@ -113,9 +115,13 @@ el.prevKeyBtn.addEventListener("click", (e) => {
     ) {
       html = `${currentKey.enharmonicKey.getHtml()}<h1>Enharmonic key</h1>${currentKey.getHtml()}`;
       display.paintKeyDiv(html);
+      progressionHtml = `${currentKey.enharmonicKey.getChordProgressionsHtml()}<h1>Enharmonic key Chord Progressions</h1>${currentKey.getChordProgressionsHtml()}`;
+      display.paintChordProgressionDiv(progressionHtml);
     } else {
       html = `${currentKey.getHtml()}<h1>Enharmonic key</h1>${currentKey.enharmonicKey.getHtml()}`;
       display.paintKeyDiv(html);
+      progressionHtml = `${currentKey.getChordProgressionsHtml()}<h1>Enharmonic key Chord Progressions</h1>${currentKey.enharmonicKey.getChordProgressionsHtml()}`;
+      display.paintChordProgressionDiv(progressionHtml);
     }
   }
 });
@@ -125,8 +131,10 @@ el.nextKeyBtn.addEventListener("click", (e) => {
   direction = "right";
   currentKey = currentKey.nextKey;
   let html;
+  let progressionHtml;
   if (!currentKey.enharmonicKey) {
     display.paintKeyDiv(currentKey.getHtml());
+    display.paintChordProgressionDiv(currentKey.getChordProgressionsHtml());
   } else {
     if (
       direction === "right" &&
@@ -134,9 +142,13 @@ el.nextKeyBtn.addEventListener("click", (e) => {
     ) {
       html = `${currentKey.enharmonicKey.getHtml()}<h1>Enharmonic key</h1>${currentKey.getHtml()}`;
       display.paintKeyDiv(html);
+      progressionHtml = `${currentKey.enharmonicKey.getChordProgressionsHtml()}<h1>Enharmonic key Chord Progressions</h1>${currentKey.getChordProgressionsHtml()}`;
+      display.paintChordProgressionDiv(progressionHtml);
     } else {
       html = `${currentKey.getHtml()}<h1>Enharmonic key</h1>${currentKey.enharmonicKey.getHtml()}`;
+      progressionHtml = `${currentKey.getChordProgressionsHtml()}<h1>Enharmonic key Chord Progressions</h1>${currentKey.enharmonicKey.getChordProgressionsHtml()}`;
       display.paintKeyDiv(html);
+      display.paintChordProgressionDiv(progressionHtml);
     }
   }
 });
