@@ -299,7 +299,7 @@ class Key {
   //Method
   get12BarBlues() {
     return `<div><h6 class="heading">12 Bar Blues</h6>
-    <div class="chordFlexWraper"><div class="chordSection">
+    <div class="chordFlexWrapperTwo"><div class="chordSection">
     ${this.wrapChordDuration(4, this.diatonicChordArray[0])}
     </div>
     <div class="chordSection">
@@ -323,7 +323,7 @@ class Key {
   //Method
   get1645() {
     return `<div><h6 class="heading">One Six Four Five</h6>
-      <div class="chordFlexWraper"><div class="chordSection">
+      <div class="chordFlexWrapperTwo"><div class="chordSection">
       ${this.wrapChordDuration(4, this.diatonicChordArray[0])}
       </div>
       <div class="chordSection">
