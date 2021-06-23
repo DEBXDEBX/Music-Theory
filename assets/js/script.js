@@ -18,6 +18,8 @@ function startUp() {
   currentKey = createKeys();
   display.paintKeyDiv(currentKey.getHtml());
   // "<h1>A<span>&sharp;</span> B<span>&flat;</span> C D E F G </h1>"
+
+  display.paintChordProgressionDiv(currentKey.getChordProgressionsHtml());
 }
 
 function createKeys() {

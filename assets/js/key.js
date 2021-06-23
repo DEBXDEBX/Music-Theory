@@ -275,4 +275,22 @@ class Key {
     <h6 class="heading">Chords in the Key of ${this.majorScale[5]} minor</h6>
       ${this.getRelativeMinorChordsHtml()}</div></div>`;
   } // End
+
+  // New Code *******************************************************
+
+  //Method
+  getChordProgressionsHtml() {
+    // return "hello david";
+    // return `${this.getBluesProgression()}`;
+    return `<div class="progressions"><div class="progressionsSection"><h6 class="heading">Chord progression's in the Key of ${
+      this.tonic
+    }</h6>
+    ${this.getBluesProgression()}</div></div>`;
+  } // End
+
+  //Method
+  getBluesProgression() {
+    // return this.diatonicChordArray[0];
+    return `<div class="progression"><div class="chordSection">${this.diatonicChordArray[0]}</div>${this.diatonicChordArray[0]} ${this.diatonicChordArray[0]} ${this.diatonicChordArray[0]}  </div>`;
+  } // End
 }
