@@ -288,11 +288,13 @@ class Key {
 
   //Method
   get12BarBlues() {
-    // return this.diatonicChordArray[0];
-    return `<div class="progression"><h6 class="heading">12 Bar Blues</h6><div class="chordSection">${this.wrapChordDuration(
-      4,
-      this.diatonicChordArray[0]
-    )}</div>  </div>`;
+    return `<div><h6 class="heading">12 Bar Blues</h6>
+    <div class="chordFlexWraper"><div class="chordSection">
+    ${this.wrapChordDuration(4, this.diatonicChordArray[0])}
+    </div>
+    <div class="chordSection">
+    ${this.wrapChordDuration(2, this.diatonicChordArray[3])}
+    </div></div></div>`;
   } // End
 
   //Method

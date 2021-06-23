@@ -244,3 +244,8 @@ h5 {
 .numOfTimes {
   font-weight: 900;
 }
+.chordFlexWraper {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
