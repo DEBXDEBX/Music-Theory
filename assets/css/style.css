@@ -44,8 +44,19 @@ h5 {
 }
 #prevKeyBtn,
 #nextKeyBtn {
-  margin: 0px 50px;
+  margin: 10px 50px;
 }
+#prevKeyBtn {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#nextKeyBtn {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
 .heading {
   font-size: 2.5rem;
 }
