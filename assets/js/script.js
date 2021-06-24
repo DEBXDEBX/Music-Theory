@@ -115,12 +115,12 @@ el.prevKeyBtn.addEventListener("click", (e) => {
     ) {
       html = `${currentKey.enharmonicKey.getHtml()}<h1>Enharmonic key</h1>${currentKey.getHtml()}`;
       display.paintKeyDiv(html);
-      progressionHtml = `${currentKey.enharmonicKey.getChordProgressionsHtml()}<h1>Enharmonic key Chord Progressions</h1>${currentKey.getChordProgressionsHtml()}`;
+      progressionHtml = `${currentKey.enharmonicKey.getChordProgressionsHtml()}<h1 class="progressionH1">Enharmonic key Chord Progressions</h1>${currentKey.getChordProgressionsHtml()}`;
       display.paintChordProgressionDiv(progressionHtml);
     } else {
       html = `${currentKey.getHtml()}<h1>Enharmonic key</h1>${currentKey.enharmonicKey.getHtml()}`;
       display.paintKeyDiv(html);
-      progressionHtml = `${currentKey.getChordProgressionsHtml()}<h1>Enharmonic key Chord Progressions</h1>${currentKey.enharmonicKey.getChordProgressionsHtml()}`;
+      progressionHtml = `${currentKey.getChordProgressionsHtml()}<h1 class="progressionH1">Enharmonic key Chord Progressions</h1>${currentKey.enharmonicKey.getChordProgressionsHtml()}`;
       display.paintChordProgressionDiv(progressionHtml);
     }
   }
