@@ -276,7 +276,7 @@ class Key {
       ${this.getRelativeMinorChordsHtml()}</div></div>`;
   } // End
 
-  // New Code *******************************************************
+  // Code for Progressions *******************************************************
 
   //Method
   wrapChordDuration(barLength, chordHtml) {
