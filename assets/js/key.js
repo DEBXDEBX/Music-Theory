@@ -58,7 +58,7 @@ class Key {
 
     let oneChord = `<div class="chordSection">
   <h5>&#8544;</h5>
-  <h6>${this.majorScale[0]}</h6>
+  <h2>${this.majorScale[0]}</h2>
   <div class="chordNoteDiv">
   <div class="noteChordInnerDiv">
     <h6 class="chordNote">${this.majorScale[0]}</h6>
@@ -75,7 +75,7 @@ class Key {
 
     let twoChord = `<div class="chordSection">
     <h5>&#8561;</h5>
-    <h6>${this.majorScale[1]} min</h6>
+    <h2>${this.majorScale[1]} min</h2>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
       <h6 class="chordNote">${this.majorScale[1]}</h6>
@@ -92,7 +92,7 @@ class Key {
 
     let threeChord = `<div class="chordSection">
     <h5>&#8562;</h5>
-    <h6>${this.majorScale[2]} min</h6>
+    <h2>${this.majorScale[2]} min</h2>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
       <h6 class="chordNote">${this.majorScale[2]}</h6>
@@ -109,7 +109,7 @@ class Key {
 
     let fourChord = `<div class="chordSection">
     <h5>&#8547;</h5>
-    <h6>${this.majorScale[3]}</h6>
+    <h2>${this.majorScale[3]}</h2>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
       <h6 class="chordNote">${this.majorScale[3]}</h6>
@@ -126,7 +126,7 @@ class Key {
 
     let fiveChord = `<div class="chordSection">
     <h5>&#8548;</h5>
-    <h6>${this.majorScale[4]}</h6>
+    <h2>${this.majorScale[4]}</h2>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
       <h6 class="chordNote">${this.majorScale[4]}</h6>
@@ -143,7 +143,7 @@ class Key {
 
     let sixChord = `<div class="chordSection">
     <h5>&#8565;</h5>
-    <h6>${this.majorScale[5]} min</h6>
+    <h2>${this.majorScale[5]} min</h2>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
       <h6 class="chordNote">${this.majorScale[5]}</h6>
@@ -160,7 +160,7 @@ class Key {
 
     let sevenChord = `<div class="chordSection">
     <h5>&#8566;</h5>
-    <h6>${this.majorScale[6]} &#176;</h6>
+    <h2>${this.majorScale[6]} &#176;</h2>
     <div class="chordNoteDiv">
     <div class="noteChordInnerDiv">
       <h6 class="chordNote">${this.majorScale[6]}</h6>
