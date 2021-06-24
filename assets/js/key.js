@@ -279,10 +279,10 @@ class Key {
   // New Code *******************************************************
 
   //Method
-  wrapChordDuration(number, chordHtml) {
+  wrapChordDuration(barLength, chordHtml) {
     return `<div class="wrapChordDuration">
    <div>${chordHtml}</div>
-   <div class="numOfTimes">X ${number}</div>
+   <div class="numOfTimes">${barLength}</div>
     </div>`;
   } // End
 
@@ -292,50 +292,107 @@ class Key {
     <div class="progressionsSection">
     <h6 class="heading">Chord Progression's in the Key of ${this.tonic}</h6>
     ${this.get12BarBlues()}
-    ${this.get1645()}
-    </div></div>`;
+    ${this.get145()}
+    ${this.get1465()} 
+   ${this.get6415()}
+   ${this.get1564()}
+   ${this.get6415()}
+   `;
   } // End
 
   //Method
   get12BarBlues() {
     return `<div><h6 class="heading">12 Bar Blues</h6>
     <div class="chordFlexWrapperTwo"><div class="chordSection">
-    ${this.wrapChordDuration(4, this.diatonicChordArray[0])}
+    ${this.wrapChordDuration("4 Bars", this.diatonicChordArray[0])}
     </div>
     <div class="chordSection">
-    ${this.wrapChordDuration(2, this.diatonicChordArray[3])}
+    ${this.wrapChordDuration("2 Bars", this.diatonicChordArray[3])}
     </div>
     <div class="chordSection">
-    ${this.wrapChordDuration(2, this.diatonicChordArray[0])}
+    ${this.wrapChordDuration("2 Bars", this.diatonicChordArray[0])}
     </div>
     <div class="chordSection">
-    ${this.wrapChordDuration(1, this.diatonicChordArray[4])}
+    ${this.wrapChordDuration("1 Bar", this.diatonicChordArray[4])}
     </div>
     <div class="chordSection">
-    ${this.wrapChordDuration(1, this.diatonicChordArray[3])}
+    ${this.wrapChordDuration("1 Bar", this.diatonicChordArray[3])}
     </div>
     <div class="chordSection">
-    ${this.wrapChordDuration(2, this.diatonicChordArray[0])}
+    ${this.wrapChordDuration("2 Bars", this.diatonicChordArray[0])}
     </div>
     </div></div>`;
   } // End
 
   //Method
-  get1645() {
-    return `<div><h6 class="heading">One Six Four Five</h6>
+  get145() {
+    return `<div><h6 class="heading">One Four Five</h6>
+          <div class="chordFlexWrapperTwo"><div class="chordSection">
+          ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[0])}
+          </div>
+          <div class="chordSection">
+          ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[3])}
+          </div>
+          <div class="chordSection">
+          ${this.wrapChordDuration("1 Bar", this.diatonicChordArray[4])}
+          </div>
+        
+          </div></div>`;
+  } // End
+
+  //Method
+  get1465() {
+    return `<div><h6 class="heading">One Four Six Five</h6>
+        <div class="chordFlexWrapperTwo"><div class="chordSection">
+        ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[0])}
+        </div>
+        <div class="chordSection">
+        ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[3])}
+        </div>
+        <div class="chordSection">
+        ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[5])}
+        </div>
+        <div class="chordSection">
+        ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[4])}
+        </div>
+      
+        </div></div>`;
+  } // End
+
+  //Method
+  get1564() {
+    return `<div><h6 class="heading">One Five Six Four</h6>
       <div class="chordFlexWrapperTwo"><div class="chordSection">
-      ${this.wrapChordDuration(4, this.diatonicChordArray[0])}
+      ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[0])}
       </div>
       <div class="chordSection">
-      ${this.wrapChordDuration(2, this.diatonicChordArray[5])}
+      ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[4])}
       </div>
       <div class="chordSection">
-      ${this.wrapChordDuration(2, this.diatonicChordArray[3])}
+      ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[5])}
       </div>
       <div class="chordSection">
-      ${this.wrapChordDuration(1, this.diatonicChordArray[4])}
+      ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[3])}
       </div>
     
       </div></div>`;
+  } // End
+
+  //Method
+  get6415() {
+    return `<div><h6 class="heading">Six Four One Five</h6>
+        <div class="chordFlexWrapperTwo"><div class="chordSection">
+        ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[5])}
+        </div>
+        <div class="chordSection">
+        ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[3])}
+        </div>
+        <div class="chordSection">
+        ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[0])}
+        </div>
+        <div class="chordSection">
+        ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[4])}
+        </div>
+        </div></div>`;
   } // End
 }
