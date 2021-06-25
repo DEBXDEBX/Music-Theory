@@ -33,8 +33,8 @@ class Key {
     for (let note of this.majorScale) {
       note = note.replace("#", "&sharp;");
       newArray.push(note);
-      this.majorScale = newArray;
     }
+    this.majorScale = newArray;
   } // End
 
   //Method
@@ -43,8 +43,8 @@ class Key {
     for (let note of this.majorScale) {
       note = note.replace("b", "&flat;");
       newArray.push(note);
-      this.majorScale = newArray;
     }
+    this.majorScale = newArray;
   } // End
 
   //Method
