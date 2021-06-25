@@ -2,7 +2,6 @@
 * {
   /* padding will not add to the ACTUALLY WIDTH OF THE BOX */
   box-sizing: border-box;
-
   margin: 0;
   padding: 0;
 }
@@ -10,18 +9,12 @@
 html,
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0 auto;
-  /* line-height: 1.7em; */
 }
 a {
   text-decoration: none;
 }
 /* Create Variables */
 :root {
-  --primary-color: #ec10d2;
-  --secondary-color: #26f20c;
-  --myBlue-color: #00e8ff;
-
   --primary-color: #ec10d2;
   --secondary-color: #00e8ff;
   --chord-color: #26f20c;
@@ -238,7 +231,7 @@ h5 {
     font-size: 0.5rem;
   }
 }
-/* Code for Progressions ********************************* */
+/* Code for chord Progressions ********************************* */
 #chordProgressionDiv {
   background-color: var(--primary-color);
   padding: 10px;

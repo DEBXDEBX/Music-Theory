@@ -259,7 +259,7 @@ class Key {
   } // End
 
   //Method
-  getHtml() {
+  getKeyHtml() {
     return `<div class="key"><div class="keySection"><h6 class="heading">Notes in the Key of ${
       this.tonic
     }<h6 class="heading">${this.getNumberSharpsFlats()}</h6</h6><h6 class="heading">${
@@ -298,7 +298,7 @@ class Key {
    ${this.get1645()}
    ${this.get6415()}
    ${this.getCanon()}
-   `;
+   </div></div>`;
   } // End
 
   //Method
@@ -337,7 +337,6 @@ class Key {
           <div class="chordSection">
           ${this.wrapChordDuration("1 Bar", this.diatonicChordArray[4])}
           </div>
-        
           </div></div>`;
   } // End
 
@@ -356,7 +355,6 @@ class Key {
         <div class="chordSection">
         ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[4])}
         </div>
-      
         </div></div>`;
   } // End
 
@@ -374,8 +372,7 @@ class Key {
       </div>
       <div class="chordSection">
       ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[3])}
-      </div>
-    
+      </div>    
       </div></div>`;
   } // End
 
@@ -394,7 +391,6 @@ class Key {
         <div class="chordSection">
         ${this.wrapChordDuration("1/2 Bar", this.diatonicChordArray[4])}
         </div>
-      
         </div></div>`;
   } // End
 
