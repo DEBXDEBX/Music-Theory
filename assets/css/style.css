@@ -21,6 +21,10 @@ a {
   --primary-color: #ec10d2;
   --secondary-color: #26f20c;
   --myBlue-color: #00e8ff;
+
+  --primary-color: #ec10d2;
+  --secondary-color: #00e8ff;
+  --chord-color: #26f20c;
 }
 
 h1 {
@@ -61,7 +65,7 @@ h5 {
   font-size: 2.5rem;
 }
 #keyDiv {
-  background-color: var(--myBlue-color);
+  background-color: var(--secondary-color);
   padding: 10px;
   border-radius: 10px;
 }
@@ -108,7 +112,7 @@ h5 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: var(--secondary-color);
+  background-color: var(--chord-color);
   border-radius: 25px;
   margin: 2px;
   padding: 5px;
@@ -245,7 +249,7 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--myBlue-color);
+  background-color: var(--secondary-color);
   padding: 10px;
   width: 98%;
   margin: 10px auto;
