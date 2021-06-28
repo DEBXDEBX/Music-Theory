@@ -261,7 +261,7 @@ h5 {
 .progressionH1 {
   margin-top: 70px;
 }
-/* button */
+/* button from bootstrap */
 .btn {
   display: inline-block;
   font-weight: 400;
@@ -283,13 +283,25 @@ h5 {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.btn-dark:hover {
-  color: #fff;
-  background-color: var(--primary-color);
-  border-color: var(--secondary-color);
-}
 .btn-dark {
   color: #fff;
   background-color: #212529;
   border-color: #212529;
+}
+.btn-check:active + .btn-dark:focus,
+.btn-check:checked + .btn-dark:focus,
+.btn-dark.active:focus,
+.btn-dark:active:focus,
+.show > .btn-dark.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgb(66 70 73 / 50%);
+}
+
+.btn-check:active + .btn-dark,
+.btn-check:checked + .btn-dark,
+.btn-dark.active,
+.btn-dark:active,
+.show > .btn-dark.dropdown-toggle {
+  color: #fff;
+  background-color: #1a1e21;
+  border-color: #191c1f;
 }
