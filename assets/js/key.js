@@ -11,7 +11,7 @@ class Key {
     this.setFlats();
     this.tonic = this.majorScale[0];
     this.diatonicChordArray = this.buildDiatonticChordArray();
-    this.relativeMinorChordArray = this.buildRelativMinorArray();
+    this.relativeMinorChordArray = this.buildRelativeMinorArray();
   } // End constructor
 
   static buildCircularLinkedListOfKeys() {
@@ -284,7 +284,7 @@ class Key {
     }
   }
   //Method
-  buildRelativMinorArray() {
+  buildRelativeMinorArray() {
     let newArray = [];
 
     newArray.push(this.diatonicChordArray[5].replace("&#8565", "&#8560"));
@@ -367,13 +367,13 @@ class Key {
     return `<div class="progressions">
     <div class="progressionsSection">
     <h6 class="heading">Chord Progression's in the Key of ${this.tonic}</h6>
-    ${this.get12BarBlues()}
-    ${this.get145()}
+    ${this.get1645()}
     ${this.get1465()} 
-   ${this.get1564()}
-   ${this.get1645()}
-   ${this.get6415()}
-   ${this.getCanon()}
+    ${this.get1564()}
+    ${this.get6415()}
+    ${this.get145()}
+    ${this.get12BarBlues()}
+    ${this.getCanon()}
    </div></div>`;
   } // End
 
